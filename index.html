@@ -1,0 +1,822 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Motorshop</title>
+            
+
+
+    <!-- ======Bootstrap link========== -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" 
+    rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+
+    <link rel="shortcut icon" href="images/bike-1.png" type="image/x-icon">
+       
+    <!-- =======FONT AWESOME LINK======== -->
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" 
+    integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+
+
+    <!-- ========================Google Font Link============================ -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins&display=swap" rel="stylesheet">
+
+
+    <!-- =======MY EXTERNAL CSS LINK============= -->
+    <link rel="stylesheet" href="index.css">
+
+
+
+
+</head>
+<body>
+    <header class="container-fluid  pb-5">
+
+                <!-- ***************nav start************* -->
+    <nav class="navbar navbar-expand-lg  navbar-light pt-5  ">
+        <div class="container nav-body d-flex d-sm-flex d-lg-flex d-md-block d-xl-flex d-xxl-flex  justify-content-end   fixed-top ">
+            <div class="row d-flex justify-content-between pt-2">
+                <div class="col">
+          <a class="navbar-brand  " href="#">
+              <div class="img col-6 ">
+              <img src="images/logo-icon.png" alt="" class="img-fluid ">
+              
+              </div>
+              
+          </a>
+        </div>
+        <div class="col">
+          <button class="navbar-toggler col-12 bg-info " type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon "></span>
+          </button>
+        </div>
+        </div>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0 d-flex align-items-center pt-0 pb-4">
+             
+              <li class="nav-item  pe-4">
+                <a class="nav-link active" aria-current="page" href="#">Home</a>
+              </li>
+              <li class="nav-item  pe-4">
+                <button type="submit" class="btn btn-outline-info" ondblclick="darkMoodRemove()" onclick="darkMood()">Dark Mood</button>
+              </li>
+              <li class="nav-item pe-4 ">
+                <a class="nav-link" href="#product">Shop</a>
+              </li>
+              <li class="nav-item  pe-4" >
+                <li class="nav-item pe-4 ">
+                    <a class="nav-link" href="#news">News</a>
+                  </li>
+                  <li class="nav-item  pe-4" >
+               
+                <a class="nav-link" href="#contact-us">Contact</a>
+                 
+              
+              </li>
+
+
+              
+
+
+              <li class="nav-item pe-5">
+                
+
+                <a class="btn " data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample">
+                  <i class="fas fa-cart-plus" style="font-size: 40px; color: rgb(105, 238, 255);">
+                  </i>
+                  
+                </a>
+               
+                
+                <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+                  <div class="offcanvas-header">
+                    <h3 class="offcanvas-title text-success" id="offcanvasExampleLabel">Item Selected </h3>
+                    <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                  </div>
+                  <div class="offcanvas-body text-center">
+                    <div class="list text-dark">
+                    <ol class=" w-100"  id="cartList">
+                        
+                      <a href="#">  <li class="row d-flex " >
+                        <div class="col-2">
+                        <!-- <img src="images/Accisories102.jpg" class="img-fluid" alt=""> -->
+                        </div>
+                        <div class="col-10 d-flex justify-content-around">
+                         
+                        <p>Product Name</p> 
+                        <p>Price</p>
+                         </div>
+                      </li></a>
+                      
+                   
+                    </ol>
+                    <h5 class="text-center text-primary mt-2" id="sub_total" >0</h5> 
+                   <h5 class=" text-center text-primary mt-2" id="total_tax" > 0</h5>
+                    <h5 class="price text-center text-primary mt-2" id="total_price">0</h5>
+            
+                    <button type="submit" class="btn btn-danger w-100" id="confirmOrder"  >Confirm Order</button>
+                  </div>
+                    
+
+                    </div>
+                  </div>
+                </div>
+               </li>
+              
+              
+            </ul>
+          </div>
+        </div>
+      </nav>
+<!-- *************************nav end**************** -->
+
+<!-- ***************Banner start************* -->
+
+<section class="container header-banner pt-5 pb-5" >
+    <div class="row row-cols-1 row-cols-lg-2 row-cols-md-1 align-items-center">
+        <div class="col col-lg-5 pt-5 ">
+            <p><i> Computer-controlled digital transistorized.</i></p>
+            <p class="banner-heading">Honda CBR 300R</p>
+            <p>If you’ve got a soft spot for sportbike design and Grand Prix stylings,
+                 then the 2021 Honda CBR300R is your sweet spot between form and function.</p>
+            <!-- Button trigger modal -->
+             <button type="button" class="btn purchase-btn " data-bs-toggle="modal" data-bs-target="#Purchase">
+                Purchase
+               </button>
+               
+               <!-- Modal -->
+               <div class="modal fade" id="Purchase" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                 <div class="modal-dialog">
+                   <div class="modal-content">
+                     <div class="modal-header">
+                       <h5 class="modal-title text-dark" id="exampleModalLabel"> Honda CBR</h5>
+                       <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                     </div>
+                     <div class="modal-body text-dark">
+                        <div class="card" >
+                            <img src="images/header-bike.png" class="card-img-top" alt="...">
+                            <div class="card-body">
+                              <h5 class="card-title" id="Honda_CBR_300R" >Honda CBR 300R</h5>
+                              
+                              <p class="card-text"> Computer-controlled digital transistorized.</p>
+                            </div>
+                            <ul class="list-group list-group-flush">
+                              <li class="list-group-item">
+                               <span class="text-danger"> Engine Type</span> <br>
+                                286cc liquid-cooled single-cylinder four-stroke
+                              </li>
+                              <li class="list-group-item">
+                                <span class="text-danger"> Bore And Stroke</span> <br>
+                                76mm x 63mm
+                              </li>
+                              <li class="list-group-item">
+                                <span class="text-danger"> Induction</span> <br>
+                                PGM-FI, 38mm throttle body
+                              </li>
+                              <li id="price_of_300R">2500</li>
+                            </ul>
+                            
+                          </div>
+                     </div>
+                     <div class="modal-footer">
+                       <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                       <button type="button" class="btn btn-primary"onclick="addCart('Honda_CBR_300R','price_of_300R','images/header-bike.png')"> ADD TO CART</button>
+                     </div>
+                   </div>
+                 </div>
+               </div>  
+
+        </div>
+        <div class="col p-2">
+            <img src="images/header-bike.png" class="img-fluid" alt="">
+        </div>
+    </div>
+
+
+
+
+</section>
+
+<!-- ***************Banner end************* -->
+
+    </header>
+
+
+    <main id="main_body" >
+    
+<!-- ****************************Fetured Bikes 2021******************************* -->
+
+        <section class="container  mt-5" id="product">
+
+            <p class="featured-header pt-3 text-center"> Fetured Bikes 2021 </p>
+            <p class="h4  text-center"> Honda CBR 300R  </p>
+            <p class="text-center text-danger h5">**This bike is available in 3 colors** </p>
+            
+           <div class="row row-cols-lg-3 row-cols-1 g-4 ">
+               <div class="col fetured honda-1 p-5">
+                   <img src="images/bike101.png" class="img-fluid " alt="">
+                   <p class="h5 pt-2 text-center fw-bold"> Honda CBR 300R (BLACK & <span class="text-secondary">WHITE</span> )  </p>
+               </div>
+               <div class="col fetured honda-2 p-5">
+                <img src="images/bike102.png " class="img-fluid" alt="">
+                <p class="h5 pt-2 text-center fw-bold"> Honda CBR 300R (<span class="text-primary" >BLUE</span> & <span class="text-secondary">WHITE</span> )  </p>
+            </div>
+            
+            <div class="col fetured honda-3 p-5">
+                <img src="images/gray102.png" class="img-fluid" alt="">
+                <p class="h5 pt-2 text-center fw-bold"> Honda CBR 300R (<span class="text-dark" >BLACK</span> & <span class="text-secondary">Matte Gray </span> )  </p>
+            </div>
+            
+               
+           </div>
+        </section>
+
+
+<!-- ***********************latest News******************* -->
+           <section class="container  mt-5" id="news">
+            <p class="latest-header pt-3 text-center"> Latest News </p>
+            <div class="row row-cols-1 row-cols-md-1 row-cols-lg-3 g-4">
+                <div class="col">
+                  <div class="card h-100 ">
+                      <div class="product-img bg-light ">
+                        <img src="images/bike-1.png" class="card-img-top" alt="...">
+                      </div>
+                  
+                    <div class="card-body p-4">
+                      <h5 class="card-title product-title fw-bold ">Ducati XDIAVEL S-73 </h5>
+                      <p class="card-text">XDiavel, the Ducati cruiser that combines the best of both worlds, is renewed, still remaining true to its philosophy. </p>
+                      <div class="ordering d-flex justify-content-between ">
+                          
+                       
+                        <a href="https://www.ducati.com/ww/en/bikes/xdiavel/xdiavel" target="-blank">
+                            <button type="button" class="btn border btn-news  border-danger text-danger  P-2">
+                                Read More 
+                                </button>
+                        </a>   
+                              
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100 ">
+                        <div class="product-img bg-light ">
+                          <img src="images/bike-3.png" class="card-img-top" alt="...">
+                        </div>
+                    
+                      <div class="card-body p-4">
+                        <h5 class="card-title product-title fw-bold "> Streetfighter V4 S </h5>
+                        <p class="card-text">For 2021 Ducati presents the Streetfighter V4 S in a new Dark Stealth colour scheme, which joins the sporty Ducati Red.</p>
+                        <div class="ordering d-flex justify-content-between ">
+                            
+                            <a href="https://www.ducati.com/ww/en/bikes/streetfighter/streetfighter-v4" target="-blank">
+                                <button type="button" class="btn border btn-news  border-danger text-danger  P-2">
+                                    Read More 
+                                    </button>
+                            </a>   
+                                
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div class="card h-100 ">
+                        <div class="product-img bg-light ">
+                          <img src="images/bike-2.png" class="card-img-top" alt="...">
+                        </div>
+                    
+                      <div class="card-body p-4">
+                        <h5 class="card-title product-title fw-bold ">Diavel 1260 S  </h5>
+                        <p class="card-text">Ducati enriches the Diavel 1260 family for the
+                             2022 Model Year with the presentation of the new Diavel 1260 S “Black and Steel”.</p>
+                        <div class="ordering d-flex justify-content-between ">
+                        
+                        <a href="https://www.ducati.com/ww/en/bikes/diavel/diavel-1260" target="-blank">
+                            <button type="button" class="btn border btn-news  border-danger text-danger  P-2">
+                                Read More 
+                                </button>
+                        </a>   
+                              
+                                
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                
+              </div>
+
+           </section>
+
+
+
+
+           <!-- ***********************clients*************** -->
+
+           <section class="container mt-5 mb-5">
+
+            <p class="clients-header pt-5 text-center">Happy <span style="color: #E76F51;"> Clients says</span> </p>
+
+            <div class="row row-cols-1 row-cols-lg-3 row-cols-md-1 w-75 mx-auto g-4">
+                <div class="col">
+                  <div class="card h-100  align-items-center pt-5">
+                    <img src="images/user-1.png" class="card-img-top  w-50" alt="...">
+                    <div class="card-body text-center">
+                     
+                      <p class="card-text"> Buying experience - good support but I didn't get anything complimentary
+                          from HONDA and they didn't reduce the price.</p>
+                      <span style="color: #E76F51;"> 
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i> 
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                     </span>    
+                     <p class="text-primary fw-bold">Regina Miles</p>
+                     <p class="text-dark fst-italic">Engineer</p>
+
+                    </div>
+                  </div>
+                </div>
+                <div class="col ">
+                    <div class="card h-100  align-items-center pt-5">
+                      <img src="images/user-2.png" class="card-img-top  w-50" alt="...">
+                      <div class="card-body text-center">
+                       
+                        <p class="card-text"> Buying experience - good support but I didn't get anything complimentary
+                            from HONDA and they didn't reduce the price.</p>
+                        <span style="color: #E76F51;"> 
+                          <i class="fas fa-star"></i>
+                          <i class="fas fa-star"></i> 
+                          <i class="fas fa-star"></i>
+                          <i class="fas fa-star"></i>
+                          <i class="far fa-star"></i>
+                       </span>    
+                       <p class="text-primary fw-bold">Lili Jacson</p>
+                       <p class="text-dark fst-italic">Engineer</p>
+  
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div class="card h-100  align-items-center pt-5">
+                      <img src="images/user-4.png"  class="card-img-top rounded rounded-circle w-50" alt="...">
+                      <div class="card-body text-center">
+                       
+                        <p class="card-text"> Buying experience - good support but I didn't get anything complimentary
+                            from HONDA and they didn't reduce the price.</p>
+                        <span style="color: #E76F51;"> 
+                          <i class="fas fa-star"></i>
+                          <i class="fas fa-star"></i> 
+                          <i class="fas fa-star"></i>
+                          <i class="fas fa-star"></i>
+                          <i class="far fa-star"></i>
+                       </span>    
+                       <p class="text-primary fw-bold">Cat Hopes</p>
+                       <p class="text-dark fst-italic">Youtuber</p>
+  
+                      </div>
+                    </div>
+                  </div>
+                
+              </div>
+           
+           </section>
+
+
+
+           <section class="container">
+
+            <p class="clients-header pt-5 text-center">Frequently Asked<span style="color: #E76F51;">  Questions</span> </p>
+             
+             <div class="row row-cols-1 row-cols-lg-2">
+                 <div class="col p-3">
+                     <img src="images/faq.png" class="img-fluid w-75" alt="">
+                 </div>
+                 <div class="col">
+                    <div class="accordion " id="accordionFlushExample">
+                        <div class="accordion-item mb-4">
+                          <h2 class="accordion-header" id="flush-headingOne">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                                What are the most important things I should know about riding a bike?
+                            </button>
+                          </h2>
+                          <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body"> Safety First! Always obey the rules of the road.
+                                 Obey all traffic signals, signs, and laws. Get in the mindset of “driving” your bike—not just “riding” your bike. 
+                                This will help you be a more focused and legally compliant bike rider</div>
+                          </div>
+                        </div>
+                        <div class="accordion-item mb-4">
+                          <h2 class="accordion-header" id="flush-headingTwo">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                                How can I tell if my helmet is old and I need a new one?
+                            </button>
+                          </h2>
+                          <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body">Bear in mind that if the helmet did its job most
+                                 people would tell you that they did not even hit their head, 
+                                or did not hit their head that hard. And the thin shells on most helmets 
+                                now tend to hide any dents in the foam.</div>
+                          </div>
+                        </div>
+                        <div class="accordion-item  mb-4">
+                          <h2 class="accordion-header" id="flush-headingThree">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                                My bike has been in storage is it safe to ride?
+                            </button>
+                          </h2>
+                          <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body">The bottom line: Leaving your bike outside for a day or two won't do major damage.
+                                 You may see signs of rust after a week of neglect. After one month in bad conditions, 
+                                 your beloved bike parts will start to degrade.</div>
+                          </div>
+                        </div>
+                        <div class="accordion-item  mb-4">
+                            <h2 class="accordion-header" id="flush-headingfour">
+                              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapsefour" aria-expanded="false" aria-controls="flush-collapseThree">
+                                What rules should I follow when riding my bike?
+                              </button>
+                            </h2>
+                            <div id="flush-collapsefour" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
+                              <div class="accordion-body">
+                                When riding, always: <br>
+                                Go With the Traffic Flow. Ride on the right in the same direction as other vehicles. 
+                                Obey All Traffic Laws. A bicycle is a vehicle and you're a driver.
+                                Yield to Traffic When Appropriate. 
+                                Be Predictable. 
+                                Stay Alert at All Times.
+                                Look Before Turning.
+                                Watch for Parked Cars.
+                              </div>
+                            </div>
+                          </div>
+                      </div>
+                 </div>
+             </div>
+                 
+           </section>
+
+
+           <section class="container  mt-5 mb-5 ">
+            <p class="clients-header pt-5 text-center">Modify  <span style="color: #E76F51;"> As You Like</span> </p>
+            <div class="container-fluid header-banner gy-5  ">
+        
+
+                <div id="carouselExampleCaptions" class="carousel slide  " data-bs-ride="carousel">
+                    <div class="carousel-indicators">
+                      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                    
+                    </div>
+                    
+                    <div class="carousel-inner bg-secondary p-5  w-100 m-auto  ">
+                      <div class="carousel-item active ">
+                        <div class="row   ">
+                            <div class="item-img col-md-5 col-sm-5 col-12 col-lg-5 col-xl-5  pt-5">
+                                <img src="images/honda101-removebg-preview.png" class=" img-fluid d-block w-100" alt="...">
+                            </div>    
+                        
+                        <div class="caption  col-md-7 col-sm-7 d-flex flex-column col-12 col-lg-7 col-xl-7 pb-3 justify-content-center ">
+                            <div class="banner-caption">
+                                <p class="clients-header pt-5  text-center">SKall<span style="color: #E76F51;">Face</span> </p>
+                                <p class="text-center">Looked Like A Beast, Drive Like a Monster!!!!!!!!!!!!!!!! <br>
+                            
+                                    <!-- Button trigger modal -->
+                                          <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#skallface">
+                                             Call For Modify
+                                            </button>
+                                        </p>    
+                                            <!-- Modal -->
+                                            <div class="modal fade" id="skallface" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                              <div class="modal-dialog">
+                                                <div class="modal-content">
+                                                  <div class="modal-header">
+                                                    <h5 class="modal-title" id="exampleModalLabel"> <i class="fas fa-phone-alt"></i>  Call For Modify</h5>
+                                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                                  </div>
+                                                  <div class="modal-body">
+                                                    <h3 class="text-dark fw-bold ">  ESTIMETED COST- 250$</h3>
+                                                    <h3 class="text-danger fw-bold ">  <i class="fas fa-phone-alt"></i> +880 170101010</h3>
+                                                  </div>
+                                                  <div class="modal-footer">
+                                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                                    <button type="button" class="btn btn-primary">CALL >> <i class="fas fa-phone-alt"></i> </button>
+                                                  </div>
+                                                </div>
+                                              </div>
+                                            </div>
+                            
+                     
+                        </div>
+                        </div>
+                       
+                        </div>
+                      </div>
+                      <div class="carousel-item h-100  ">
+                        <div class="row ">
+                            <div class="item-img col-md-5 col-sm-5 col-12 col-lg-5 col-xl-5  pt-4">
+                                <img src="images/honda112.png" class=" img-fluid d-block w-100" alt="...">
+                            </div>    
+                        
+                        <div class="caption  col-md-7 col-sm-7 d-flex flex-column col-12 col-lg-7 col-xl-7 pb-4 justify-content-center ">
+                            <div class="banner-caption">
+                                <p class="clients-header pt-5 text-center">Red<span style="color: #E76F51;">Beast</span> </p>
+                            <p class="text-center">Looked Like A Beast, Drive Like a Monster!!!!!!!!!!!!!!!! <br>
+                            
+                            <!-- Button trigger modal -->
+                                  <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#redbeast">
+                                     Call For Modify
+                                    </button>
+                                </p>    
+                                    <!-- Modal -->
+                                    <div class="modal fade" id="redbeast" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                      <div class="modal-dialog">
+                                        <div class="modal-content">
+                                          <div class="modal-header">
+                                            <h5 class="modal-title" id="exampleModalLabel"> <i class="fas fa-phone-alt"></i>  Call For Modify</h5>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                          </div>
+                                          <div class="modal-body">
+                                            <h3 class="text-dark fw-bold ">  ESTIMETED COST- 250$</h3>
+                                            <h3 class="text-danger fw-bold ">  <i class="fas fa-phone-alt"></i> +880 170101010</h3>
+                                          </div>
+                                          <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                            <button type="button" class="btn btn-primary">CALL >> <i class="fas fa-phone-alt"></i> </button>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                            
+                     
+                        </div>
+                        </div>
+                       
+                        </div>
+                      </div>
+                      <div class="carousel-item h-100  ">
+                        <div class="row ">
+                            <div class="item-img col-md-5 col-sm-5 col-12 col-lg-5 col-xl-5  pt-3">
+                                <img src="images/rsz_honda103-removebg-preview.png" class=" img-fluid d-block w-100" alt="...">
+                            </div>    
+                        
+                        <div class="caption  col-md-7 col-sm-7 d-flex flex-column col-12 col-lg-7 col-xl-7 pb-4 justify-content-center ">
+                            <div class="banner-caption">
+                                <p class="clients-header pt-5  text-center">Red<span style="color: #E76F51;">Monster</span> </p>
+
+                               <p class="text-center">Looked Like A Beast, Drive Like a Monster!!!!!!!!!!!!!!!! <br>
+                            
+                            <!-- Button trigger modal -->
+                                  <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#redmonster">
+                                     Call For Modify
+                                    </button>
+                                </p>    
+                                    <!-- Modal -->
+                                    <div class="modal fade" id="redmonster" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                      <div class="modal-dialog">
+                                        <div class="modal-content">
+                                          <div class="modal-header">
+                                            <h5 class="modal-title" id="exampleModalLabel"> <i class="fas fa-phone-alt"></i>  Call For Modify</h5>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                          </div>
+                                          <div class="modal-body">
+                                            <h3 class="text-dark fw-bold ">  ESTIMETED COST- 250$</h3>
+                                            <h3 class="text-danger fw-bold ">  <i class="fas fa-phone-alt"></i> +880 170101010</h3>
+                                          </div>
+                                          <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                            <button type="button" class="btn btn-primary">CALL >> <i class="fas fa-phone-alt"></i> </button>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                            
+                     
+                        </div>
+                        </div>
+                       
+                        </div>
+                      </div>
+                     
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden text.dark">Next</span>
+                    </button>
+                  </div>
+                
+            </div>
+       
+           </section>
+
+
+           <section class="container mt-5 mb-5">
+            <p class="clients-header pt-5 text-center">Acce<span style="color: #E76F51;">ssories</span> </p>
+            <div class="card mb-3">
+                <div class="row g-0">
+                  <div class="col-md-4 p-2">
+                    <img src="images/assisories101.png" id="assisories101" class="img-fluid rounded-start" alt="...">
+                  </div>
+                  <div class="col-md-8">
+                    <div class="card-body">
+                      <h5 class="card-title item_name" id="rain_tyres_EVO2">DTC EVO2 -- rain tyres</h5>
+                      <p class="card-text">The Ducati Traction & Wheelie Control Evo 2 for slick tyres is now also available for Panigale V4 and Panigale V4 S. 
+                          Derived from Ducati MotoGP 2018, it has been developed for V4R and V4 R Sbk together with Ducati Corse </p>
+                          <div class="price h3" id="price_Of_rain_tyres">180</div>
+                      <button type="button" class="btn btn-dark add_to_cart" id="addToCart1" onclick="addCart('rain_tyres_EVO2','price_Of_rain_tyres','images/assisories101.png')">Add To Cart <i class="fas fa-cart-plus"></i></button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="card mb-3 " >
+                <div class="row g-0">
+                  <div class="col-md-4 p-2">
+                    <img src="images/assisories102.jpg" class="img-fluid rounded-start" alt="...">
+                  </div>
+                  <div class="col-md-8">
+                    <div class="card-body">
+                      <h5 class="card-title item_name" id="memorabilia">Memorabilia</h5>
+                      <p class="card-text">As of December 2019, the Ducati Memorabilia project will be giving, for the first time,
+                           fans of the Bologna-based bike manufacturer the chance to purchase certified parts from bikes
+                           used in recent years by MotoGP .</p>
+                           <div class="price h3 m-1" id="price_Of_Memorabilia">120</div>
+                           <button type="button" class="btn btn-dark add_to_cart" onclick="addCart('memorabilia','price_Of_Memorabilia','images/assisories102.jpg')" id="addToCart2">Add To Cart <i class="fas fa-cart-plus"></i></button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="row row-cols-1 row-cols-md-3 pb-5 mx-auto mt-5 g-4">
+                    <div class="col">
+                      <div class="card h-100">
+                        <img src="images/cloth.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                          <h5 class="card-title" id="Racing_suit_k1">Ducati Corse K1- Racing suit</h5>
+                          <div class="price h3 m-1" id="price_Of_Racing_suit_k1">50</div>
+                          <button type="button" class="btn btn-dark add_to_cart" onclick="addCart('Racing_suit_k1','price_Of_Racing_suit_k1','images/cloth.png')" >Add To Cart <i class="fas fa-cart-plus"></i></button>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col">
+                      <div class="card h-100">
+                        <img src="images/cloth102.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                          <h5 class="card-title" id="Racing_suit_mg20">Replica MotoGp 20 - Racing suit</h5>
+                          <div class="price h3 m-1" id="price_Of_Racing_suit_mg20">50</div>
+                          <button type="button" class="btn btn-dark add_to_cart" onclick="addCart('Racing_suit_mg20','price_Of_Racing_suit_mg20','images/cloth102.png')">Add To Cart <i class="fas fa-cart-plus"></i></button>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col">
+                      <div class="card h-100">
+                        <img src="images/cloth103.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                          <h5 class="card-title"id="Racing_suit_c5" >Ducati Corse C5 - Racing suit</h5>
+                          <div class="price h3 m-1" id="price_Of_Racing_suit_c5">50</div>
+                          <button type="button" class="btn btn-dark add_to_cart" onclick="addCart('Racing_suit_c5','price_Of_Racing_suit_c5','images/cloth103.jpg')">Add To Cart <i class="fas fa-cart-plus"></i></button>                        </div>
+                      </div>
+                    </div>
+                    
+                  </div>
+              </div>
+              
+           </section>
+
+    </main>
+<hr>
+<!-- ********************************footer start************************************* -->
+  <footer class="container-fluid pt-5 mt-5">
+
+    <div class="container-fluid bg-danger text-light">
+
+        <div class="row row-cols-1 row-cols-lg-3 row-cols-xl-3 row-cols-md-2 row-cols-sm-1  p-5 g-4 ">
+          
+          <div class="col" id="contact-us">
+  
+            <h3>CONTACT US</h3>
+            
+            <p><h5> Dhaka Branch:</h5>
+              Asadullah House, 5/1, Block- E, Lalmatia, Dhaka
+            </p>
+            <p><h5>Rangpur Branch:</h5>
+              Boda-Pourosova,Ward-3,House-03/1,Panchagarh</p>
+            <p><h5>Phone:</h5>
+                <i class="fas fa-phone-alt"></i> 8801701000000-4</p>  
+              <p><h5>Email:</h5>
+                <i class="far fa-envelope"></i> bike@-home.com <br>
+                <i class="far fa-envelope"></i> bike-home@gmail.com</p>    
+          
+          </div>
+          
+          <div class="col">
+            <h3>Register For News & Offers</h3>
+            <form class="row g-3">
+              <div class="col-md-6">
+                <label for="inputEmail4" class="form-label">Email</label>
+                <input type="email" class="form-control" id="inputEmail4">
+              </div>
+              <div class="col-md-6">
+                <label for="inputPassword4" class="form-label">Enter A Password</label>
+                <input type="password" class="form-control" id="inputPassword4">
+              </div>
+              
+  
+              <div class="col-12">
+                <label for="inputAddress" class="form-label">Address</label>
+                <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
+              </div>
+              
+              
+              <div class="col-md-12">
+                <label for="inputphone4" class="form-label">Phone:</label>
+                <input type="number" class="form-control" id="inputphone4">
+              </div>
+              <div class="col-12">
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" id="gridCheck">
+                  <label class="form-check-label" for="gridCheck">
+                    Check me out
+                  </label>
+                </div>
+              </div>
+              <div class="col-12">
+                <button type="submit" class="btn btn-dark w-100">Sign in</button>
+              </div>
+            </form>
+          </div>
+
+          <div class="col ps-2">
+            <h3>Get the App</h3>
+            <img src="images/App Store Badge.png" alt=""><br>
+            <img src="images/Layer 2.png" class="pt-2 pb-5" alt="">
+            <br>
+            <h3 >Follow Us On</h3>
+
+            <span class="follow-icon">
+                <a href="https://www.facebook.com/hondapowersports/" target="-blank">
+                    <i class="fab fa-facebook"></i>
+                </a>
+                <a href="https://www.instagram.com/honda_powersports_us/" target="-blank">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href=" https://www.youtube.com/user/hondapowersportsus" target="-blank">
+                    <i class="fab fa-youtube"></i>
+                </a>
+                <a href="https://twitter.com/hondapowersprts" target="-blank">
+                    <i class="fab fa-twitter"></i>
+                </a>
+            </span>
+          </div>
+
+        </div>
+      </div>
+      <p class="bg-white text-center">© Designed & Devloped by Rfat Ivan Ahamed.</p>
+
+
+
+
+
+  </footer>
+
+
+<!-- ********************************footer end************************************* -->
+
+
+
+
+
+
+
+
+
+
+
+    
+<!-- ******************************************SCRIPT**************************************************** -->
+
+
+
+
+
+
+
+
+        <!-- =======Bootstrap JS Scripting link=========== -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" 
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="index.js"></script>    
+    
+</body>
+</html>

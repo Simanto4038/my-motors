@@ -1,0 +1,175 @@
+body{
+    padding: 0;
+    margin: 0;
+
+}
+
+header{
+    font-family: 'Poppins', sans-serif;
+    background: #264653;
+    color: white;
+}
+
+.nav-link{
+    color: white !important;
+}
+
+.nav-body{
+    background: #264653;
+} 
+.banner-heading{
+font-family: Poppins;
+font-style: normal;
+font-weight: 600;
+font-size: 48px;
+line-height: 72px;
+}
+.fa-times:hover{
+    text-shadow: 1px 1px 5px 1px red;
+    transform: scale(1.5);
+
+}
+.purchase-btn{
+    background-color: #E76F51;
+    color: white;
+    
+}
+
+.cartProductPrice::after
+{
+  content: '$';
+}
+#total_tax::before
+{
+    content: 'TOTAL-TAX: $';
+}
+
+#sub_total::before{
+    content: 'Sub Total: $';
+}
+/* **********************Featured***************** */
+.featured-header{
+    font-family: Poppins;
+font-style: normal;
+font-weight: 600;
+font-size: 48px;
+line-height: 54px;
+}
+.fetured>img{
+    transition: 0.8s;
+}
+.honda-1:hover{
+    background: radial-gradient(circle, rgb(128, 123, 129) 25%, rgba(241,235,240,1) 80%);
+    border-radius: 20px;
+    
+}
+.honda-1:hover>img{
+ transform: scale(1.10);
+ 
+}
+.honda-3:hover>img{
+    transform: scale(1.10)  ;
+    
+    
+   }
+.honda-2:hover>img{
+    transform: scale(1.10);
+    
+   }   
+.honda-2:hover{
+    background: radial-gradient(circle, rgba(71,146,235,1) 19%, rgba(239,240,245,1) 83%);
+    border-radius: 20px;
+}
+.honda-3:hover{
+    background: radial-gradient(circle, rgba(235,71,97,1) 25%, rgba(239,240,245,1) 80%);
+    border-radius: 20px;
+}
+
+/* *******************NEWS*********************** */
+.latest-header{
+    font-family: Poppins;
+font-style: normal;
+font-weight: 600;
+font-size: 48px;
+line-height: 72px;
+}
+
+.product-img{
+    border: solid white 18px;
+    border-radius: 25px;
+}
+
+.btn-news:hover{
+
+    background: #E76F51;
+    color: white !important;
+    font-weight: 400;   
+}
+
+.price::before
+{
+ content: "Price:-$";
+ 
+}
+
+.clients-header{
+    font-family: Poppins;
+font-style: normal;
+font-weight: 600;
+font-size: 48px;
+line-height: 72px;
+}
+
+.follow-icon a{
+color: white;
+text-decoration: none;
+font-size: 36px;
+padding-left: 15px;
+}
+
+
+
+
+
+@media only screen and (max-width: 600px) {
+
+    .nav-tgl{
+        color: white !important;
+    }
+    .banner-heading{
+        font-family: Poppins;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 34px;
+    line-height: 52px;
+    }
+
+   
+.featured-header{
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 36px;
+    
+}
+
+
+/* *******************NEWS*********************** */
+.latest-header{
+    font-family: Poppins;
+font-style: normal;
+font-weight: 600;
+font-size: 34px;
+line-height: 52px;
+}
+
+.clients-header{
+    font-family: Poppins;
+font-style: normal;
+font-weight: 600;
+font-size: 32px;
+line-height: 48px;
+}
+
+
+}
